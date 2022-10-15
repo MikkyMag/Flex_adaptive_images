@@ -1,0 +1,124 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+}
+
+h2 {
+    font-size: 1.5rem;
+
+}
+
+h2::after {
+    content: '';
+    display: block;
+    margin: 10px 0 20px;
+    height: 3px;
+    width: 16px;
+    background: #cc0000;
+}
+
+.list {
+display: flex;
+flex-wrap: wrap;
+justify-content: space-between;
+
+}
+
+.list figure {
+    max-width: 48%;
+    box-shadow: 0px 0px 47px -13px rgba(0,0,0,0.30);
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    margin: 0 0 0.5rem 0;
+}
+
+figcaption {
+    padding: 0.687rem 0.5rem;
+    font-weight: 600;
+    align-items: center;
+
+}
+
+.list figure img {
+    width: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.list figure:hover {
+    transform: translatey(-7px);
+    box-shadow: 0px 15px 24px 0px rgba(0,0,0,0.27);
+}
+
+/* Responsiveness */
+
+/* Tablet version */
+
+@media only screen and (min-width: 480px) and (max-width: 895px) 
+{       
+    .list figure {
+        width: 23%;
+        box-shadow: 0px 0px 47px -13px rgba(0,0,0,0.30);           
+        border-radius: 5px;
+        margin: 0 0 0.5rem 0;
+            
+        }
+}
+
+
+/* Desktop version */
+
+@media only screen and (min-width: 896px) {
+
+    .list {
+        display: grid;
+        justify-content: center;
+        gap: 1rem;
+        grid-template: 
+        "a a a a a a b b b c c c" 
+        "a a a a a a t t t i i i" 
+        "d d d d f f f f g g g g" / 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    }
+
+    .list figure:nth-child(1) {
+        grid-area: a;
+    }
+
+    .list figure:nth-child(2) {
+        grid-area: b;
+    }
+
+    .list figure:nth-child(3) {
+        grid-area: c;
+    }
+
+    .list figure:nth-child(4) {
+        grid-area: t;
+    }
+
+    .list figure:nth-child(5) {
+        grid-area: i;
+    }
+
+    .list figure:nth-child(6) {
+        grid-area: d;
+    }
+
+    .list figure:nth-child(7) {
+        grid-area: f;
+    }
+
+    .list figure:nth-child(8) {
+        grid-area: g;
+    }
+
+    .list figure {
+        max-width: 100%;
+        box-shadow: 0px 0px 47px -13px rgba(0,0,0,0.30);
+        border-radius: 5px;
+        margin: 0;
+    }
+
+}
